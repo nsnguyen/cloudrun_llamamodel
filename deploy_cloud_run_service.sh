@@ -3,5 +3,6 @@ gcloud run deploy "$SERVICE_NAME" \
   --region="$LOCATION" \
   --allow-unauthenticated \
   --set-env-vars PROJECT_ID="$PROJECT_ID" \
-  --memory=6Gi \
-  --cpu=2
+  --memory=8Gi \
+  --cpu=2 \
+  --timeout=3600

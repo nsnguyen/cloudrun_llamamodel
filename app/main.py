@@ -26,5 +26,5 @@ async def root():
 @app.post("/process_message")
 async def process_message(request: InferenceRequest):
   # breakpoint()
-  output = MODEL(request.prompt, echo=True)
+  output = MODEL(request.prompt, max_tokens=48, echo=True)
   return {'data': output}
